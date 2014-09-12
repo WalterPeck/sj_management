@@ -1,67 +1,70 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+  	
+  subject { page }
   
-  let(:base_title) {"S&J Risk Management"}
+  shared_examples_for "all static pages" do
+  	it { should have_selector('h1', text: heading) }
+  	it { should have_title(full_title(page_title)) }
+  end
+  
   
   describe "Home Page" do
-   
-    it "should have the content 'S&J Risk Management'" do
-      visit '/static_pages/home'	
-      expect(page).to have_content('S&J Risk Management')
+		before { visit root_path} 
+		let(:heading) { 'S&J Risk Management' }  
+		let(:page_title) { '' }
+
+    it_should_behave_like "all static pages"
+    it { should_not have_title('| Home') }  
     end
   	
-  	it "should have the title 'Home'" do
-  		visit '/static_pages/home'
-  		expect(page).to have_title("#{base_title}")
-  	end
   	
-  	it "should not have a custom page title" do
- 			visit '/static_pages/home'
- 			expect(page).not_to have_title('| Home')
- 		end	
+  	
+
  
-	end
+
 	
 		
 	describe "Contact Page" do
+		before { visit contact_path }
+		let(:heading) { 'Contact' }  
+		let(:page_title) { 'Contact' }
+
 		
-		it "should have the content 'Contact Us'" do
-			visit '/static_pages/contact'
-			expect(page).to have_content('Contact Us')
-		end
-		
-		it "should have the title 'Contact'" do
-  		visit '/static_pages/contact'
-  		expect(page).to have_title("#{base_title} | Contact")
-  	end
+		it { should have_title(full_title('Contact')) }
 	end
 
 	
 	describe "Services Page" do	
+		before { visit services_path }
+		let(:heading) { 'Services' }  
+		let(:page_title) { 'Services' }
+
 		
-		it "should have the content 'Services Provided' " do
-			visit '/static_pages/services'
-			expect(page).to have_content('Services Provided')
-		end
-		
-		it "should have the title 'Services'" do
-  		visit '/static_pages/services'
-  		expect(page).to have_title("#{base_title} | Services")
-  	end	
+		it { should have_title(full_title('Services')) }
 	end
 	
 	describe "Training Page" do
 		
-		it "should have the content 'Training' " do
-			visit '/static_pages/training'
-			expect(page).to have_content('Training')
-		end
+		before { visit training_path }
+		let(:heading) { 'Training' }  
+		let(:page_title) { 'Training' }
 		
-		it "should have the title 'Training'" do
-			visit '/static_pages/training'
-			expect(page).to have_title("#{base_title} | Training")
-		end
+
+		it { should have_title(full_title('Training')) }
+	end
+	
+	it "should have the right links on the layout" do	
+		visit root_path
+		click_link "Services"
+		expect(page).to have_title(full_title('Services'))
+		click_link "Home"
+		expect(page).to have_title(full_title(''))
+		click_link(first("Contact"))
+		expect(page).to have_title(full_title('Contact'))
+		click_link "Training"
+		expect(page).to have_title(full_title('Training'))
 	end
 
 end

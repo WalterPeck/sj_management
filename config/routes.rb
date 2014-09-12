@@ -1,8 +1,8 @@
 SjManagement::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/contact"
-  get "static_pages/services"
- 	get "static_pages/training"
+  root "static_pages#home"
+  match '/contact',  to: "static_pages#contact", via: 'get'
+	match '/services',  to: "static_pages#services", via: 'get'
+ 	match '/training',  to: "static_pages#training", via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

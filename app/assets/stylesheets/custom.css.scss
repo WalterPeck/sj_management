@@ -1,0 +1,128 @@
+@import "bootstrap";
+
+
+/*Typography*/
+.landing-type {
+	h1 {
+	font-size: 1.8em;
+	color: 	white;
+	margin-top: 40%; /*--CHANGE HEIGHT FOR MOBILE--*/
+	}
+}
+
+
+/* navbar*/
+.navbar {
+	margin-bottom: 0px;
+}
+
+
+
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+/*----HOME PAGE----*/
+
+.home-jumbo {
+	background: image-url("background_1.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+.jumbo-height {
+	height: 200px;
+}
+
+.logo-div {
+  	width:150px;
+		padding-top:10px;
+	  display: inline-block;
+    
+    vertical-align: middle;
+}
+
+.front-logo{
+
+}
+
+.no-pad {
+
+}
+
+@media(max-width: 500px) {
+
+.no-pad {
+	padding-left: 0px;
+}
+
+}
+	
+
+
+@media (min-width: 500px) {
+	.jumbo-height {
+		height: 350px;
+	}
+	
+	.logo-div {
+		width:300px;
+		padding-top:25px;
+	}
+
+}
+
+
+@media (min-width: 768px) {
+	
+	.jumbo-height {
+		height: 400px;
+	}
+	
+	.logo-div {
+		width:350px;
+		padding-top:25px;
+	}
+
+}
+
+
+@media (min-width: 996px) {
+	.jumbo-height {
+		height: 500px;
+	}
+	
+	.logo-div {
+		width:450px;
+		padding-top:25px;
+	}
+
+}
