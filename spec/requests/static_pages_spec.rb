@@ -61,7 +61,7 @@ describe "StaticPages" do
 		expect(page).to have_title(full_title('Services'))
 		click_link "Home"
 		expect(page).to have_title(full_title(''))
-		click_link(first("Contact"))
+		click_link "Contact"
 		expect(page).to have_title(full_title('Contact'))
 		click_link "Training"
 		expect(page).to have_title(full_title('Training'))

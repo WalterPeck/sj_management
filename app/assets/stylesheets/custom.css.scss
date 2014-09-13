@@ -6,8 +6,13 @@
 	h1 {
 	font-size: 1.8em;
 	color: 	white;
-	margin-top: 40%; /*--CHANGE HEIGHT FOR MOBILE--*/
+	padding-top: 40px; /*--CHANGE HEIGHT FOR MOBILE--WAIT HOLY SHIT THIS IS AWESOME*/
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
 	}
+}
+
+.front {
+ font-size:	3.8em;
 }
 
 
@@ -64,7 +69,7 @@ footer ul li {
 
 .logo-div {
   	width:150px;
-		padding-top:10px;
+		padding-top: 25px;
 	  display: inline-block;
     
     vertical-align: middle;
@@ -78,11 +83,14 @@ footer ul li {
 
 }
 
+/*-----RESPONSIVE MEDIA QUERIES....WOO HOO-----*/
+
 @media(max-width: 500px) {
 
 .no-pad {
-	padding-left: 0px;
+	padding-left: 3px;
 }
+
 
 }
 	
@@ -94,9 +102,17 @@ footer ul li {
 	}
 	
 	.logo-div {
-		width:300px;
-		padding-top:25px;
+		width:250px;
+		padding-top:40px;
 	}
+
+.landing-type {
+	width: 200px;
+	padding-top:50px;
+	h1 {
+	font-size: 3em;
+	}
+}	
 
 }
 
@@ -112,6 +128,15 @@ footer ul li {
 		padding-top:25px;
 	}
 
+	.landing-type {
+	padding-top: 80px;
+	h1 {
+	font-size: 4.2em;
+	}
+}	
+
+
+
 }
 
 
@@ -125,4 +150,25 @@ footer ul li {
 		padding-top:25px;
 	}
 
+	.landing-type {
+	padding-top: 120px;
+	h1 {
+	font-size: 5.6em;
+	}
+	}
+
+@media (min-width: 1200px) {
+	
+	.landing-type {
+	padding-top: 120px;
+	h1 {
+	font-size: 6em;
+	}
+	}
+
+
+	
+}
+
+	
 }
