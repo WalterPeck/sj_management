@@ -23,6 +23,8 @@
 		
 		<% if current_page?('/')%>
 		<%= render 'layouts/jumbotron'%>
+		<%elsif current_page?('/training')%>	
+		<%= render 'layouts/training'%>
 		<%end%>
 		<div class="container<%if current_page?('/')%> marketing <%end%>">
 			<%= yield %>

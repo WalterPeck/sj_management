@@ -1,6 +1,11 @@
 @import "bootstrap";
 
 
+.center {
+	text-align: center;
+}
+
+
 /*Typography*/
 .landing-type {
 	h1 {
@@ -101,7 +106,47 @@ footer ul li {
 }
 
 .market-row {		
-	margin-top: 30px;
+	margin-top: 50px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-list {
+	padding-top: 20px;
+}
+
+.about {
+	padding-top: 30px;
+}
+
+
+
+/*---TRAINING PAGE----*/
+
+.training-jumbo {
+	background: image-url("way_big.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}	
+
+/*---CONTACT PAGE----*/
+
+.contact-icons {
+	padding-bottom: 120px;	
 }
 
 /*-----RESPONSIVE MEDIA QUERIES....WOO HOO-----*/
@@ -114,6 +159,8 @@ footer ul li {
 
 
 }
+
+
 	
 
 
@@ -137,6 +184,9 @@ footer ul li {
 
 }
 
+.featurette-image {
+	width: 375px;
+}
 
 @media (min-width: 768px) {
 	
@@ -155,6 +205,10 @@ footer ul li {
 	font-size: 4.2em;
 	}
 }	
+
+.featurette-image {
+	width: 100%;
+}
 
 
 
