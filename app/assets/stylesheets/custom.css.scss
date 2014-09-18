@@ -3,7 +3,36 @@
 
 .center {
 	text-align: center;
+	 
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+
+/*----this is for getting rid of the OUTLINE when click IMG's*/
+
+a {
+	outline: 0;
+}
+
+:focus {
+  outline: none !important;
+}
+
+::-moz-focus-inner {
+  border: 0 !important;
+}
+/*-------------------------------*/
+
+
 
 
 /*Typography*/
@@ -25,6 +54,22 @@
 .navbar {
 	margin-bottom: 0px;
 }
+
+.navbar-brand {
+	
+    float: left;
+    padding: 5px;
+    font-size: 18px;
+
+    height: 71px; /*this is when having a padding of 5 px*/
+	p {
+		padding-top: 19px;
+		font-size: 1.4em;
+	}
+
+}
+
+
 
 
 
@@ -68,6 +113,8 @@ footer ul li {
     background-size: 100% 100%;
 }
 
+
+
 .jumbo-height {
 	height: 200px;
 }
@@ -87,6 +134,8 @@ footer ul li {
 .no-pad {
 
 }
+
+
 
 
 /* MARKETING CONTENT
@@ -113,7 +162,7 @@ footer ul li {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 50px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -143,12 +192,20 @@ footer ul li {
     background-size: 100% 100%;
 }	
 
+
+
+
+
 /*---CONTACT PAGE----*/
 
 .contact-icons {
-	padding-bottom: 120px;	
+	padding-bottom: 0px;	
 }
 
+.mobile-contact {
+	height: 100px;
+	margin-bottom: 30px;
+}
 /*-----RESPONSIVE MEDIA QUERIES....WOO HOO-----*/
 
 @media(max-width: 500px) {
@@ -156,6 +213,12 @@ footer ul li {
 .no-pad {
 	padding-left: 3px;
 }
+
+.contact-icons {
+	max-width:100%;
+}
+
+
 
 
 }
@@ -184,11 +247,26 @@ footer ul li {
 
 }
 
+
+
 .featurette-image {
 	width: 375px;
 }
 
+
+
+
+.contact-icons {
+	max-width:100px;
+}
+
 @media (min-width: 768px) {
+	
+	/*--navbar---*/
+	.nav > li > a {
+	line-height: 40px;
+}
+	
 	
 	.jumbo-height {
 		height: 400px;
@@ -210,12 +288,26 @@ footer ul li {
 	width: 100%;
 }
 
+.contact-icons {
+	max-width:100%;
+}
 
+.contact-heading {
+	text-align: center;	
+	margin-top:30px;
+	padding-bottom: 30px;
+}
+
+	.contact-icons {
+	max-width:70%;
+	}
 
 }
 
 
-@media (min-width: 996px) {
+
+
+@media (min-width: 970px) {
 	.jumbo-height {
 		height: 500px;
 	}
@@ -230,7 +322,12 @@ footer ul li {
 	h1 {
 	font-size: 5.6em;
 	}
+	
+	.contact-icons {
+	max-width:70%;
 	}
+
+}
 
 @media (min-width: 1200px) {
 	
@@ -241,7 +338,9 @@ footer ul li {
 	}
 	}
 
-
+		.contact-icons {
+	max-width:70%;
+	}
 	
 }
 
