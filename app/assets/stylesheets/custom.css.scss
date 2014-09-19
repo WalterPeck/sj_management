@@ -8,12 +8,16 @@
 
 .vcenter {
     display: inline-block;
+    text-align: center;
     vertical-align: middle;
     float: none;
 }
 
+/*USE BELOW TO CENTER IMAGES MY DUDE*/
+
 .img-center {
 	margin: 0 auto;
+	display: block;
 }
 
 
@@ -106,7 +110,7 @@ footer ul li {
 /*----HOME PAGE----*/
 
 .home-jumbo {
-	background: image-url("background_1.jpg") no-repeat center center; 
+	background: image-url("background_2.jpg") no-repeat center center; 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -154,15 +158,17 @@ footer ul li {
   margin-left: 10px;
 }
 
-.market-row {		
-	margin-top: 50px;
+.market-column { 
+ margin-top: 50px;
 }
 
-/* Featurettes
+
+
+/* SERVICES/ Featurettes
 ------------------------- */
 
 .featurette-divider {
-  margin: 50px 0; /* Space out the Bootstrap <hr> more */
+  margin: 30px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -176,23 +182,47 @@ footer ul li {
 	padding-top: 20px;
 }
 
+.featurette-image {
+	padding-bottom: 20px;
+}
+
 .about {
 	padding-top: 30px;
 }
 
+.service-button-row {
+	padding-top:15px;
+}
+
+.service-button {
+	padding-top: 10px;
+}
 
 
 /*---TRAINING PAGE----*/
 
 .training-jumbo {
-	background: image-url("way_big.jpg") no-repeat center center; 
+	min-height: 500px;
+	background: image-url("icanfeelit.jpg") no-repeat center center; 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
 }	
 
-
+.background {
+    background: image-url('way_big.jpg') no-repeat center center;
+    top: 0px;
+  
+    background: none no-repeat scroll 50% 50% / cover transparent;
+    opacity: 0.2;
+    /* z-index: 1; */
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    position: absolute;
+		min-height: 0px;
+}
 
 
 
@@ -206,6 +236,10 @@ footer ul li {
 	height: 100px;
 	margin-bottom: 30px;
 }
+.contact-link {
+	font-size: 30px;
+}
+
 /*-----RESPONSIVE MEDIA QUERIES....WOO HOO-----*/
 
 @media(max-width: 500px) {
@@ -250,7 +284,8 @@ footer ul li {
 
 
 .featurette-image {
-	width: 375px;
+	width: 320px;
+	
 }
 
 
@@ -284,10 +319,17 @@ footer ul li {
 	}
 }	
 
+/*--SERVICES featurette --*/
 .featurette-image {
 	width: 100%;
+	padding: 0px;
 }
 
+.featurette-divider {
+  margin: 50px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/*--CONTACT PAGE---*/
 .contact-icons {
 	max-width:100%;
 }
