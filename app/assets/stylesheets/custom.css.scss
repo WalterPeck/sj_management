@@ -54,6 +54,9 @@ a {
 }
 
 
+
+
+
 /* navbar*/
 .navbar {
 	margin-bottom: 0px;
@@ -73,7 +76,9 @@ a {
 
 }
 
-
+.navbar-toggle {
+	margin-top: 18px;
+}
 
 
 
@@ -146,14 +151,14 @@ footer ul li {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing {
   margin-bottom: 20px;
   text-align: center;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-lg-4 p {
+.marketing .col-md-4 p {
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -183,6 +188,7 @@ footer ul li {
 }
 
 .featurette-image {
+	max-width: 80%;
 	padding-bottom: 20px;
 }
 
@@ -191,7 +197,7 @@ footer ul li {
 }
 
 .service-button-row {
-	padding-top:15px;
+	padding-top:40px;
 }
 
 .service-button {
@@ -202,7 +208,7 @@ footer ul li {
 /*---TRAINING PAGE----*/
 
 .training-jumbo {
-	min-height: 500px;
+	min-height: 200px;
 	background: image-url("icanfeelit.jpg") no-repeat center center; 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
@@ -224,12 +230,20 @@ footer ul li {
 		min-height: 0px;
 }
 
+.train-type {
+	padding-top: 70%;
+	font-size: 2.5em;
+	color: white;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+}
+
 
 
 /*---CONTACT PAGE----*/
 
 .contact-icons {
 	padding-bottom: 0px;	
+	max-width: 100px
 }
 
 .mobile-contact {
@@ -240,6 +254,10 @@ footer ul li {
 	font-size: 30px;
 }
 
+.contact-heading {
+	padding-bottom:20px;
+}
+
 /*-----RESPONSIVE MEDIA QUERIES....WOO HOO-----*/
 
 @media(max-width: 500px) {
@@ -248,9 +266,7 @@ footer ul li {
 	padding-left: 3px;
 }
 
-.contact-icons {
-	max-width:100%;
-}
+
 
 
 
@@ -263,12 +279,16 @@ footer ul li {
 
 @media (min-width: 500px) {
 	.jumbo-height {
-		height: 350px;
+		height: 290px;
+	}
+	
+	.training-jumbo {
+	min-height: 290	px;
 	}
 	
 	.logo-div {
 		width:250px;
-		padding-top:40px;
+		padding-top:20px;
 	}
 
 .landing-type {
@@ -279,21 +299,30 @@ footer ul li {
 	}
 }	
 
+.train-type {
+	
+	font-size: 3.8em;
 }
 
-
+.contact-icons {
+	max-width: 120px;
+}
 
 .featurette-image {
-	width: 320px;
+	width: 368px;
 	
 }
 
-
-
-
-.contact-icons {
-	max-width:100px;
 }
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 768px) {
 	
@@ -307,6 +336,11 @@ footer ul li {
 		height: 400px;
 	}
 	
+	.training-jumbo {
+	max-height: 400px;
+	}
+	
+	
 	.logo-div {
 		width:350px;
 		padding-top:25px;
@@ -314,10 +348,10 @@ footer ul li {
 
 	.landing-type {
 	padding-top: 80px;
-	h1 {
-	font-size: 4.2em;
+		h1 {
+			font-size: 4em;
+		}
 	}
-}	
 
 /*--SERVICES featurette --*/
 .featurette-image {
@@ -337,21 +371,36 @@ footer ul li {
 .contact-heading {
 	text-align: center;	
 	margin-top:30px;
-	padding-bottom: 30px;
+	padding-bottom: 60px;
 }
 
 	.contact-icons {
 	max-width:70%;
 	}
 
+.train-type {
+	padding-top:70%;
+	font-size: 4.5em;
+}
+
 }
 
 
 
 
-@media (min-width: 970px) {
+@media (min-width: 992px) {
+	
 	.jumbo-height {
 		height: 500px;
+	}
+	
+	.train-type {
+	padding-top:55%;
+	font-size: 6em;
+}
+	
+	.training-jumbo {
+	min-height: 480px;
 	}
 	
 	.logo-div {
@@ -364,27 +413,39 @@ footer ul li {
 	h1 {
 	font-size: 5.6em;
 	}
+	}
 	
 	.contact-icons {
 	max-width:70%;
 	}
+	
+	.market-column {
+		margin-top: 70px;
+	}	
+
+	.service-button-row {
+	padding-top:80px;
+}
 
 }
 
 @media (min-width: 1200px) {
 	
 	.landing-type {
-	padding-top: 120px;
-	h1 {
-	font-size: 6em;
-	}
+		padding-top: 120px;
+		h1 {
+			font-size: 6em;
+		}
 	}
 
-		.contact-icons {
+	.contact-icons {
 	max-width:70%;
 	}
 	
+	.train-type {
+		padding-top:35%;
+		font-size: 7em;
+	}
 }
 
 	
-}
