@@ -9,5 +9,8 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
-
+	
+	def email_test(email,name)
+		UserMailer.welcome_email(email,name).deliver
+	end
 end
