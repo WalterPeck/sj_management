@@ -1,9 +1,12 @@
 class UserMailer < ActionMailer::Base
   default from: "chrislabarge2@gmail.com"
 	
-	def welcome_email(email, name)
+	def training_email(company_email, name, email, body)
 		@name = name 
-		mail(to: email, subject: "Hello #{@name}" )
+		@email = email
+		@body = body
+		
+		mail(to: company_email, subject: "NEW Training Client!!" )
 	end
 	
 end
