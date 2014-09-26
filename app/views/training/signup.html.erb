@@ -5,12 +5,15 @@
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-     
+     <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
      
      
      
       <div class="row">
-				<div class="col-xs-6 col-xs-offset-3">
+				<div class="col-xs-6 col-xs-offset-3" style="padding-top:30px;">
 					<%= form_tag(sendmail_path) do %>
 					<div class="form-group">
 						<%= label_tag 'name', 'Name' %>
@@ -25,15 +28,27 @@
 						<%= text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Comments...' %>
 					</div>
 					<div class="form-group"> 
-					 <%= label_tag 'profession', 'Line of Work' %>
+					 <%= label_tag 'profession', 'Occupation' %>
 					 <%= select_tag(:profession,options_for_select([['Lisbon', 1], ['Madrid', 2]]),  class: 'form-control' )%>	
 					</div>	
-						<%= submit_tag nil, class: 'btn btn-default btn-about pull-right' %>
-					<% end %>
+						<div class="form-group">
+						<%= label_tag 'city', 'Location' %>
+						<%= text_field_tag 'city', nil, class: 'form-control', placeholder: 'City' %>
+					</div>
+					<div class="form-group"> 
+					 
+					 <%= select_tag(:state, options_for_select([['NY', 'New York'], ['MA','Massachusetts'], ['VT', 'Vermont'],['PA','Pennsylvania'],['CT', 'Connecticut']]),  class: 'form-control' )%>	
+					</div>
+					
+						
 				</div>
 			</div>
      
-     
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= submit_tag nil, class: 'btn btn-success btn-about pull-right' %>
+					<% end %>
+      </div>
      
      
     </div>

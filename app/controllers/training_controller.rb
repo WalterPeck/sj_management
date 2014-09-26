@@ -12,7 +12,10 @@ class TrainingController < ApplicationController
 		email = params[:email]
 		body = params[:comments]
 		profession = params[:profession]
-		UserMailer.training_email('clabvessels@gmail.com',name,email,profession,body).deliver
+		city = params[:city]
+		state = params[:state]
+		
+		UserMailer.training_email('clabvessels@gmail.com',name,email,profession,body,city,state).deliver
 		redirect_to root_path
 	end
 end
