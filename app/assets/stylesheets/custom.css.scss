@@ -209,7 +209,7 @@ footer ul li {
 
 .training-jumbo {
 	min-height: 200px;
-	background: image-url("icanfeelit.jpg") no-repeat center center; 
+	background: image-url("looks_good.jpg") no-repeat center center; 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
@@ -238,8 +238,15 @@ footer ul li {
 }
 
    /*MODAL FOR TRAINING SIGN-UP*/
+.modal-header {
+	background-color: #f5f5f5;
+}
 
-
+.modal-footer {
+	
+}
+		
+		
 /*---CONTACT PAGE----*/
 
 .contact-icons {
@@ -256,7 +263,13 @@ footer ul li {
 }
 
 .contact-heading {
-	padding-bottom:20px;
+	padding-bottom:0px;
+}
+
+.mirror {
+	height:250px;
+	background: image-url("mirror_small.png") no-repeat center center; 
+
 }
 
 /*-----RESPONSIVE MEDIA QUERIES....WOO HOO-----*/
@@ -279,6 +292,12 @@ footer ul li {
 
 
 @media (min-width: 500px) {
+	
+	.modal-title {
+	line-height: 95px;
+}
+
+	
 	.jumbo-height {
 		height: 290px;
 	}
@@ -371,8 +390,8 @@ footer ul li {
 
 .contact-heading {
 	text-align: center;	
-	margin-top:30px;
-	padding-bottom: 60px;
+	margin-top:120px;
+	
 }
 
 	.contact-icons {
@@ -383,6 +402,13 @@ footer ul li {
 	padding-top:70%;
 	font-size: 4.5em;
 }
+
+.mirror {
+	width: 420px;
+	height: 450px;
+	background: image-url("mirror_large.png") no-repeat center center; 
+
+}	
 
 }
 
