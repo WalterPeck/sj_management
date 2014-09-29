@@ -345,7 +345,7 @@ max-width: 0px;
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 	
 	/*--navbar---*/
 	.nav > li > a {
@@ -387,7 +387,7 @@ max-width: 0px;
 
 /*--TRAINING PAGE--*/
 .training-jumbo {
-	background: image-url("looks_good1.jpg") no-repeat center center; 
+	background: image-url("training_medium.jpg") no-repeat center center; 
 }
 
 /*--CONTACT PAGE---*/
@@ -413,7 +413,7 @@ max-width: 0px;
 .mirror {
 	width: 420px;
 	height: 450px;
-	background: image-url("mirror_large.png") no-repeat center center; 
+	background: image-url("mirror_medium.png") no-repeat center center; 
 
 }	
 
@@ -469,6 +469,10 @@ max-width: 0px;
 
 @media (min-width: 1200px) {
 	
+	.training-jumbo {
+		background: image-url("training_big.jpg") no-repeat center center; 
+	}
+	
 	.landing-type {
 		padding-top: 120px;
 		h1 {
@@ -488,6 +492,11 @@ max-width: 0px;
 
 @media(max-width: 1600px) {
  .training-jumbo {
+ 	
+	
+   
+
+ 	 
  	  -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
