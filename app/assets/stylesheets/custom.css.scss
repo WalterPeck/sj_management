@@ -213,19 +213,7 @@ footer ul li {
    
 }	
 
-.background {
-    background: image-url('way_big.jpg') no-repeat center center;
-    top: 0px;
-  
-    background: none no-repeat scroll 50% 50% / cover transparent;
-    opacity: 0.2;
-    /* z-index: 1; */
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    position: absolute;
-		min-height: 0px;
-}
+
 
 .train-type {
 	padding-top: 70%;
@@ -265,7 +253,8 @@ footer ul li {
 
 .mirror {
 	height:250px;
-	background: image-url("mirror_small.png") no-repeat center center; 
+	background: image-url("mirror_big.png") no-repeat center center; 
+	
 }
 
 .arrow { /* I can get rid of this if i use the hidden bootstrap feature for extra small*/
@@ -341,7 +330,15 @@ max-width: 0px;
 
 
 
-
+@media (max-width: 767px) {
+	 
+	 .mirror{
+	 -webkit-background-size: 225px225px;
+    -moz-background-size: 225px225px;
+    -o-background-size: 225px225px;
+    background-size: 225px 225px;
+	}
+}
 
 
 
@@ -423,7 +420,7 @@ max-width: 0px;
 .mirror {
 	width: 420px;
 	height: 450px;
-	background: image-url("mirror_large.png") no-repeat center center; 
+	background: image-url("mirror_big.png") no-repeat center center; 
 		
 }	
 
