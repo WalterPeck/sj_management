@@ -115,8 +115,8 @@ footer ul li {
 /*----HOME PAGE----*/
 
 .home-jumbo {
-	background: image-url("background_2.jpg") no-repeat center center; 
-    -webkit-background-size: 100% 100%;
+	background: image-url("sky_small.jpg") no-repeat center center; 
+  -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
@@ -345,7 +345,7 @@ max-width: 0px;
 
 
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 	
 	/*--navbar---*/
 	.nav > li > a {
@@ -373,6 +373,16 @@ max-width: 0px;
 			font-size: 4em;
 		}
 	}
+
+/*--Home Page--*/
+
+.home-jumbo {
+	background: image-url("sky_med.jpg") no-repeat center center; 
+	-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
 
 /*--SERVICES featurette --*/
 .featurette-image {
@@ -413,8 +423,8 @@ max-width: 0px;
 .mirror {
 	width: 420px;
 	height: 450px;
-	background: image-url("mirror_medium.png") no-repeat center center; 
-
+	background: image-url("mirror_large.png") no-repeat center center; 
+		
 }	
 
 .arrow {
@@ -469,6 +479,14 @@ max-width: 0px;
 
 @media (min-width: 1200px) {
 	
+	
+	.home-jumbo {
+	background: image-url("sky_large.jpg") no-repeat center center; 
+		-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+	}
 	.training-jumbo {
 		background: image-url("training_big.jpg") no-repeat center center; 
 	}
@@ -490,16 +508,31 @@ max-width: 0px;
 	}
 }
 
-@media(max-width: 1600px) {
- .training-jumbo {
- 	
-	
-   
+@media(max-width: 1700px) {
 
- 	 
+
+ 
+ 
+ .training-jumbo {
+  
  	  -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
  }
-}	
+
+
+}
+
+@media(min-width: 1901px) {
+	.training-jumbo {
+  
+ 	  -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+ }
+	
+}
+
+	
