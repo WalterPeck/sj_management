@@ -63,15 +63,15 @@ a {
 }
 
 .navbar-brand {
-	
+		margin-top: 1px;
     float: left;
     padding: 5px;
-    font-size: 18px;
+    font-size: 1.3em;
 
     height: 71px; /*this is when having a padding of 5 px*/
 	p {
-		padding-top: 19px;
-		font-size: 1.4em;
+		padding-top: 16px;
+		font-size: 1.3em;
 	}
 
 }
@@ -136,15 +136,19 @@ footer ul li {
     vertical-align: middle;
 }
 
-.front-logo{
-
+.front-font {
+	font-size: 1.1em;
+	font-weight: 400;
 }
 
-.no-pad {
-
+.devices {
+	padding-top: 15px
 }
 
-
+.device-font {
+font-size: 2.3em;
+font-weight: 300;
+}
 
 
 /* MARKETING CONTENT
@@ -521,13 +525,13 @@ max-width: 0px;
 
 }
 
-@media(min-width: 1901px) {
+@media(min-width: 1930px) {
 	.training-jumbo {
-  
- 	  -webkit-background-size: 100% 100%;
+   -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
+ 	 
  }
 	
 }
