@@ -7,18 +7,20 @@
     <div class="modal-content">
      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
         <div class="row">
         	<div class='col-xs-4 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2'>
         		<%=image_tag('modal_logo.png', class:'')%>
         	</div>
         	<div class='col-xs-6'>	
-        		<h2 class="modal-title pull-left ">Training Inquery</h2>
+        		<h2 class="modal-title pull-left ">Training Registeration</h2>
       		</div>
       	</div>
+      
       </div>
      
      
-     
+   
       <div class="row">
 				<div class="col-xs-10 col-xs-offset-1  col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top:30px;">
 					<%= form_tag(sendmail_path) do %>
@@ -30,40 +32,38 @@
 						<%= label_tag 'email', 'Email' %>
 						<%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
 					</div>
+					
+					<div class="form-group"> 
+					 <%= label_tag 'company', 'Company Name (if applicable)' %>
+					 <%= text_field_tag 'company', nil, class: 'form-control', placeholder: 'Your Company Name'%>	
+					</div>
+					
 					<div class="form-group">
 						<%= label_tag 'comments', 'Comments' %>
 						<%= text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Comments...' %>
 					</div>
-					<div class="form-group"> 
-					 <%= label_tag 'profession', 'Occupation' %>
-					 <%= select_tag(:profession,options_for_select([['Lisbon', 1], ['Madrid', 2]]),  class: 'form-control' )%>	
-					</div>	
-				 </div>
-				 <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3">
+						
+				</div>
+				 
+				<div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3">
 				 <div class="form-group">
 						<%= label_tag 'city', 'City' %>
 						<%= text_field_tag 'city', nil, class: 'form-control', placeholder: 'City' %>
 					</div>
 				 
-				 </div>
-				  <div class="col-xs-5 col-sm-4 col-md-3">
+				</div>
+				<div class="col-xs-5 col-sm-4 col-md-3">
+				 		
 				 		<div class="form-group"> 
 					 		<%= label_tag 'state', 'State' %>
 					 		<%= select_tag(:state, options_for_select([['NY', 'New York'], ['MA','Massachusetts'], ['VT', 'Vermont'],['PA','Pennsylvania'],['CT', 'Connecticut']]),  class: 'form-control' )%>	
 						</div>
-				 	</div>		
-				
-				
-					
-			
-			
-			
-			
-			</div>
+				</div>		
+		</div>
      
-       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= submit_tag nil, class: 'btn btn-success btn-about' %>
+      	<div class="modal-footer">
+        <button type="button" class=" btn-default btn-lg" data-dismiss="modal">Exit</button>
+        <%= submit_tag "Submit", class:"  btn-success btn-lg" %>
 					<% end %>
       </div>
      
@@ -75,9 +75,77 @@
 
 <!--Start of the Document-->
 
-<div class="row" style="padding-top: 30px;">
+<div class="row">
+	<div class="col-xs-12 center">
+		<h2>Training Programs Offered</h2>
+	</div>
+</div>
+
+<hr class="featurette-divider"></hr>
+
+<div class='row' style="">	
+	
+	<div class="col-xs-12 col-md-6 ">
+	
+		
+		
+		
+		<h2>OSHA 30 Hour for the Construction Industry</h2>
+			<p class="front-font">
+				 This 4 Day program is a comprehensive examination of the CFR 1926 Construction Industry standards.
+				 Participants will learn how OSHA Compliance Officers enforce these construction industry standards 
+				 and methods used by employers to demonstrate compliance on their projects. The program is taught by 
+				 an Authorized OSHA 1926 Outreach Trainer and incorporates DVD presentations, interactive workshops 
+				 and new updates to industry standards into the lesson plan.	
+			</p>
+		
+		
+		
+		<h2>Work zone Safety Program</h2>
+		
+			<p class="front-font">
+				This 1 1/2 Day program introduces students to the CFR 1926 Construction Industry standards.
+	 			Participants will learn how OSHA protects workers on construction sites in the United States.  
+	 			OSHA 10-Hour Training is required for all workers working on construction sites in the State of New York.
+ 				The program provides an overview of the construction industry standards and methods used by employers to demonstrate 
+ 				compliance on their projects. The program is taught by an Authorized OSHA 1926 Outreach Trainer and incorporates 
+				DVD presentations, interactive workshops and new updates to industry standards into the lesson plan.
+
+			</p>		
+		
+		<h2>Fall Protection Awareness Program</h2>
+		
+			<p class="front-font">
+				This 1 Day program educates participants on the fall protection requirements in the construction industry. 
+				The lesson plan incorporates the definitions of fall prevention versus fall protection and methods used by
+				employers to comply with OSHA1926 – Subpart M.
+			</p>		
+	
+	
+		
+	</div>
+	
+	<div class="col-xs-12 col-md-6">
+		<%=image_tag('orange_sign.jpg', width:'80%', class:"img-circle img-center training-circle")%>
+			
+		<h2 style="padding-top:28px;">Work zone Safety Program</h2>
+		
+			<p class="front-font">
+				This 1 1/2 Day program introduces students to the CFR 1926 Construction Industry standards.
+	 			Participants will learn how OSHA protects workers on construction sites in the United States.  
+	 			OSHA 10-Hour Training is required for all workers working on construction sites in the State of New York.
+ 				The program provides an overview of the construction industry standards and methods used by employers to demonstrate 
+ 				compliance on their projects. The program is taught by an Authorized OSHA 1926 Outreach Trainer and incorporates 
+				DVD presentations, interactive workshops and new updates to industry standards into the lesson plan.
+
+			</p>		
+	
+	</div>
+	
 	<div class="col-xs-12 center">
 		<button class="btn btn-success btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg">Sign Up Today!</button>
 	</div>
+	
+
 </div>
 
