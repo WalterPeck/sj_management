@@ -137,7 +137,7 @@ footer ul li {
 }
 
 .front-font {
-	font-size: 1.1em;
+	font-size: 1.2em;
 	font-weight: 400;
 }
 
@@ -208,6 +208,12 @@ font-weight: 300;
 	padding-top: 10px;
 }
 
+.services-heading {
+	padding-bottom:20px;
+	font-size: 2.5em;
+	font-weight: 400;
+}
+
 .or {
 	padding-top: 15px;
 	padding-bottom:15px;
@@ -235,16 +241,32 @@ font-weight: 300;
 }
 
 .training-circle {
-	padding-top: 40px;
+	margin-top: 40px;
+
 }
 
+.training-heading {
+	padding-top:30px;
+		font-size: 2.2em;
+	font-weight: 500;
+}
+
+.training-title {
+	font-size:1.7em;
+	font-weight: 500;
+}
 
    /*MODAL FOR TRAINING SIGN-UP*/
 .modal-header {
 	background-color: #f5f5f5;
 }
 
-
+.modal-title {
+	padding-top:15px;
+	font-size:1.9em;
+	line-height: 32px;
+	
+}
 
 
 .modal-footer {
@@ -304,9 +326,7 @@ max-width: 0px;
 
 @media (min-width: 500px) {
 	
-	.modal-title {
-	line-height: 95px;
-}
+	
 
 	
 	.jumbo-height {
@@ -369,7 +389,9 @@ max-width: 0px;
 	.nav > li > a {
 	line-height: 40px;
 }
-	
+	.nav-pad{
+		padding-left:125px;
+	}
 	
 	.jumbo-height {
 		height: 400px;
@@ -420,6 +442,15 @@ max-width: 0px;
 /*--TRAINING PAGE--*/
 .training-jumbo {
 	background: image-url("training_medium.jpg") no-repeat center center; 
+}
+
+.training-heading {
+	font-size: 2.5em;
+}
+
+.modal-title {
+	
+	
 }
 
 /*--CONTACT PAGE---*/
