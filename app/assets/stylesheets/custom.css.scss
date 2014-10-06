@@ -256,6 +256,10 @@ font-weight: 300;
 	font-weight: 500;
 }
 
+.training-description {
+	padding-left:15px;	
+}
+
    /*MODAL FOR TRAINING SIGN-UP*/
 .modal-header {
 	background-color: #f5f5f5;
@@ -300,6 +304,10 @@ font-weight: 300;
 	
 }
 
+.small {
+	font-size:1em;
+}
+
 .arrow { /* I can get rid of this if i use the hidden bootstrap feature for extra small*/
 max-width: 0px;
 		
@@ -330,7 +338,9 @@ max-width: 0px;
 @media (min-width: 500px) {
 	
 	
-
+.small {
+	font-size:1.2em;
+}
 	
 	.jumbo-height {
 		height: 290px;
