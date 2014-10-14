@@ -62,7 +62,7 @@
 	</div>
 	
 	<div class="col-xs-12 col-md-6">
-		<%=image_tag('orange_sign.jpg', class:"img-circle img-center img-responsive training-circle", style:" border: 13px solid #18181b; ")%>
+		<%=image_tag('training_circle.jpg', class:"img-circle img-center img-responsive training-circle")%>
 		
 		<hr class="featurette-divider"></hr>	
 		
@@ -92,24 +92,5 @@
 
 
 
-<script>
-	
-	//this is for showing the modal I beleive
-	$(':input[data-loading-text]').click(function () {
-    var btn = $(this)
-    btn.button('loading')
-    setTimeout(function () {
-        btn.button('reset')
-    }, 5000)
-})
-
-	//this is for making the alert disappear.
-	window.setTimeout(function() {
-  $(".email-success").fadeTo(500, 0).slideUp(500, function(){
-      $(this).remove();
-  });
-	}, 5000);
-
-</script>
 
 
