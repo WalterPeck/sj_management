@@ -16,6 +16,8 @@ class TrainingController < ApplicationController
 		state = params[:state]
 		
 		UserMailer.training_email('clabvessels@gmail.com',name,email,company,body,city,state).deliver
-		redirect_to root_path
+		flash[:success] = "Your information was successfully submitted"
+		redirect_to training_path
+		
 	end
 end

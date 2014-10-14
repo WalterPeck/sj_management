@@ -1,17 +1,42 @@
 
 <div class="training-jumbo ">
       
-  
+      
+				          
+        
+       
+  			
 			<div class="container">
-        <div class='row'>
-      	
-      		<div class="col-xs-4 col-xs-offset-7 col-sm-offset-8">
+  			<div class="row">	
+  				<div class="col-xs-7 col-sm-8 col-md-6">
+  					
+  					<% flash.each do |key, value| %>
+        			
+        			<div class="email-<%= key%> flash fade-in">
+        				<div class="row <%= key%>-row">
+        					<div class="col-xs-6 col-xs-offset-3 col-sm-4 center col-sm-offset-0">
+        						<%=image_tag('checkmark_blue.png', class:"img-responsive img-center checkmark")%>
+        					</div>
+        					
+        					<div class="col-xs-12 col-sm-8 col-lg-7 center email-<%= key%>-text">
+        						
+        							<p><b>Thank You</b></p>
+        						
+        						
+        						<p class="lead"><%= value %> We will be in touch soon!</p>
+        					</div>
+        				
+        				</div><!-- nested ROW-->
+        			</div>
+      			<% end %>	
+  					
+  				</div>
+  				
+      		<div class="col-xs-4 col-md-offset-2">
        		 <h1 class="train-type">S&J Safety Training</h1>
-        	 
-        	 
-      	
-      		</div>
+        	</div>
 		 
 		 		</div>
 		 </div>
 </div>
+

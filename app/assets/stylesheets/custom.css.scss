@@ -39,6 +39,10 @@ a {
 
 
 
+
+
+
+
 /*Typography*/
 .landing-type {
 	h1 {
@@ -54,8 +58,8 @@ a {
 }
 
 
-
-
+/*COLOR SCHEMES*/
+ $orange: #ffa900;
 
 /* navbar*/
 .navbar {
@@ -173,6 +177,7 @@ font-weight: 300;
 
 
 
+
 /* SERVICES/ Featurettes
 ------------------------- */
 
@@ -193,7 +198,7 @@ font-weight: 300;
 
 .featurette-image {
 	max-width: 80%;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .about {
@@ -260,16 +265,51 @@ font-weight: 300;
 	padding-left:15px;	
 }
 
+.email-success {
+	border-color: $orange;
+	border-style: solid;
+	border-width: 10px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-khtml-border-radius: 30px;
+	
+	background-color:rgba(255, 255, 255, 0.7);
+	width: 100%;
+	height: 250px;	
+	
+	
+	b {
+
+		font-size:1.2em;
+	}
+}
+
+ .success-row {
+ 	margin-top: 10px;
+ }
+
+
+
+
    /*MODAL FOR TRAINING SIGN-UP*/
 .modal-header {
-	background-color: #f5f5f5;
+	background: rgb(178,178,178); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(178,178,178,1) 0%, rgba(149,149,149,1) 40%, rgba(106,106,106,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,178,178,1)), color-stop(40%,rgba(149,149,149,1)), color-stop(100%,rgba(106,106,106,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(178,178,178,1) 0%,rgba(149,149,149,1) 40%,rgba(106,106,106,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(178,178,178,1) 0%,rgba(149,149,149,1) 40%,rgba(106,106,106,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(178,178,178,1) 0%,rgba(149,149,149,1) 40%,rgba(106,106,106,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(178,178,178,1) 0%,rgba(149,149,149,1) 40%,rgba(106,106,106,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2b2b2', endColorstr='#6a6a6a',GradientType=0 ); /* IE6-9 */
 }
 
 .modal-title {
 	padding-top:15px;
-	font-size:1.9em;
+	font-size:1.8em;
 	line-height: 32px;
-	
+	color: white; 
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075);
 }
 
 
@@ -300,7 +340,7 @@ font-weight: 300;
 
 .mirror {
 	height:250px;
-	background: image-url("mirror_big.png") no-repeat center center; 
+	background: image-url("mirror_small.png") no-repeat center center; 
 	
 }
 
@@ -325,14 +365,17 @@ max-width: 0px;
 	margin-left:-15px;
 }
 
-
+.modal-title {
+	padding-left:15px;
+}
 
 
 
 }
 
 
-	
+
+
 
 
 @media (min-width: 500px) {
@@ -375,6 +418,16 @@ max-width: 0px;
 .featurette-image {
 	width: 368px;
 	
+}
+
+		/*this is to make the alert vertically centered*/
+.email-success{
+	margin-top:10%;
+}
+
+
+.checkmark {
+	max-width:100px;
 }
 
 }
@@ -465,6 +518,33 @@ max-width: 0px;
 	font-size: 2.5em;
 }
 
+	
+.modal-title {
+	font-size:2.2em;
+}	
+	
+		/*this is to make the alert vertically centered*/
+.email-success{
+	margin-top:20%;
+}
+
+.email-success-text {
+	padding-top:10px;	
+		
+	b {
+				font-size:2em;
+	}
+}
+
+.success-row {
+	margin-top:40px
+}
+
+.checkmark {
+	max-width:140px;
+}
+
+
 
 
 /*--CONTACT PAGE---*/
@@ -474,7 +554,7 @@ max-width: 0px;
 
 .contact-heading {
 	text-align: center;	
-	margin-top:110px;
+	margin-top:70px;
 	
 }
 
@@ -488,10 +568,10 @@ max-width: 0px;
 }
 
 .mirror {
-	width: 420px;
-	height: 450px;
+  height:300px;
+	margin-top:50px;
 	background: image-url("mirror_big.png") no-repeat center center; 
-		
+	background-size: 100%;	
 }	
 
 .arrow {
@@ -537,9 +617,13 @@ max-width: 0px;
 	.market-column {
 		margin-top: 70px;
 	}	
-
+	
+	.mirror {
+		width:300px;
+	
+	}
 	.arrow {
-		max-width:100%;
+		max-width:80px;
 	}
 
 }
@@ -569,10 +653,29 @@ max-width: 0px;
 	max-width:70%;
 	}
 	
+	.contact-heading {
+	
+	margin-top:110px;
+	
+}
+	
+	
+	.arrow {
+		max-width:100%;
+	}
+	
 	.train-type {
 		padding-top:35%;
 		font-size: 7em;
 	}
+	
+	.mirror {
+	width: 420px;
+	height: 400px;
+	background: image-url("mirror_big.png") no-repeat center center; 
+	background-size: 90%;	
+}	
+
 }
 
 @media(max-width: 1700px) {

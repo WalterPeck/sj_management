@@ -12,11 +12,45 @@ describe "StaticPages" do
   
   describe "Home Page" do
 		before { visit root_path} 
-		let(:heading) { 'S&J Risk Management' }  
+		let(:heading) { 'Risk Management' }  
 		let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-    it { should_not have_title('| Home') }  
+  	
+  	it "should have the right marketing-service link"do
+  		
+  		within("#marketing-services") do
+				click_link("View more")
+				expect(page).to have_title(full_title('Services'))
+			end
+			
+		end
+		
+		it "should have the right marketing-training link"do
+  		
+  		within("#marketing-training") do
+				click_link("View more")
+				expect(page).to have_title(full_title('Training'))
+			end
+			
+		end
+		
+		it "should have the right marketing-contact link"do
+  		
+  		within("#marketing-contact") do
+				click_link("View more")
+				expect(page).to have_title(full_title('Contact'))
+			end
+			
+		end
+		
+		it "should have the right learn-more link" do
+			click_link("Learn more")
+			expect(page).to have_title(full_title('Services'))
+		
+		end
+     
+    
     end
   	
   	
@@ -32,17 +66,29 @@ describe "StaticPages" do
 		let(:page_title) { 'Contact' }
 
 		
-		it { should have_title(full_title('Contact')) }
+		it_should_behave_like "all static pages"
 	end
 
 	
 	describe "Services Page" do	
 		before { visit services_path }
-		let(:heading) { 'Services' }  
-		let(:page_title) { 'Services' }
-
 		
-		it { should have_title(full_title('Services')) }
+		let(:heading) { 'Welcome' }  
+		let(:page_title) { 'Services' }
+		
+		it_should_behave_like "all static pages"
+		
+		
+		it "should have working links at the bottom" do
+		click_link('More Training')
+		expect(page).to have_title(full_title('Training'))
+		click_link('Contact S&J')
+		expect(page).to have_title(full_title('Contact'))
+		
+		end	
+		
+		
+		
 	end
 	
 	describe "Training Page" do
@@ -51,10 +97,14 @@ describe "StaticPages" do
 		let(:heading) { 'Training' }  
 		let(:page_title) { 'Training' }
 		
+				
 
-		it { should have_title(full_title('Training')) }
+		it_should_behave_like "all static pages"
 	end
 	
+
+	#this has the test visit the home page and click the links.
+
 	it "should have the right links on the layout" do	
 		visit root_path
 		click_link "Services"
@@ -65,6 +115,15 @@ describe "StaticPages" do
 		expect(page).to have_title(full_title('Contact'))
 		click_link "Training"
 		expect(page).to have_title(full_title('Training'))
+		click_link "S&J Management"
+		expect(page).to have_title(full_title(''))
+		click_link "Contact S&J"
+		expect(page).to have_title(full_title('Contact'))
+		
+	
+		
 	end
+
+	
 
 end
