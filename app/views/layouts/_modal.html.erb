@@ -1,0 +1,75 @@
+<!-- Modal (hidden) -->
+
+<div class="modal fade bs-example-modal-lg" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="modal-header">
+        <button type="button" class="close" style="color: black;" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+        <div class="row">
+        	<div class='col-xs-4 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2'>
+        		<%=image_tag('logo_modal.png', size:"95")%>
+        	</div>
+        	<div class='col-xs-4 col-sm-3'>	
+        		<h2 class="modal-title pull-left ">Training Registration</h2>
+      		</div>
+      	</div>
+      
+      </div>
+      
+     
+   
+      <div class="row">
+				<div class="col-xs-10 col-xs-offset-1  col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top:30px;">
+					<%= form_tag(sendmail_path) do %>
+					<div class="form-group">
+						<%= label_tag 'name', 'Name' %>
+						<%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name' %>
+					</div>
+					<div class="form-group">
+						<%= label_tag 'email', 'Email' %>
+						<%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
+					</div>
+					
+					<div class="form-group"> 
+					 <%= label_tag 'company', 'Company Name (if applicable)' %>
+					 <%= text_field_tag 'company', nil, class: 'form-control', placeholder: 'Your Company Name'%>	
+					</div>
+					
+					<div class="form-group">
+						<%= label_tag 'comments', 'Comments' %>
+						<%= text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Comments...' %>
+					</div>
+						
+				</div>
+				 
+				<div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3">
+				 <div class="form-group">
+						<%= label_tag 'city', 'City' %>
+						<%= text_field_tag 'city', nil, class: 'form-control', placeholder: 'City' %>
+					</div>
+				 
+				</div>
+				<div class="col-xs-5 col-sm-4 col-md-3">
+				 		
+				 		<div class="form-group"> 
+					 		<%= label_tag 'state', 'State' %>
+					 		<%= select_tag(:state, options_for_select([['NY', 'New York'], ['MA','Massachusetts'], ['VT', 'Vermont'],['PA','Pennsylvania'],['CT', 'Connecticut']]),  class: 'form-control' )%>	
+						</div>
+				</div>		
+		</div>
+     
+      	<div class="modal-footer">
+        
+				        
+        
+        
+        <button type="button" class=" btn-default btn-lg" data-dismiss="modal">Exit</button>
+        <%= submit_tag "Submit", class:"btn-success btn-lg", id:"loading-example-btn", data: { loading_text: "Submitting..."}%>
+					<% end %>
+      </div>
+     
+     
+    </div>
+  </div>
+</div>
